@@ -2,6 +2,12 @@ import Form from '@/app/ui/invoices/edit-form';
 import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
+
+// ghi đè tiêu đề tùy chỉnh cho một page cụ thể
+export const metadata: Metadata = {
+  title: 'Invoices | Edit Invoices',
+};
 
 export default async function Page(
     props: {
